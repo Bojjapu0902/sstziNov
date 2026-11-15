@@ -29,10 +29,15 @@ class FooterComponent extends HTMLElement {
                     <div class="col-7 col-lg-2 col-sm-4 md-mb-50px sm-mb-30px order-2 order-lg-3">
                         <span class="alt-font d-block text-white mb-5px">Services</span>
                         <ul>
-                            <li><a href="commerical.html">Commerical</a></li>
-                            <li><a href="residential.html">Residential</a></li>
-                            <li><a href="renewable.html">Renewable-Energy</a></li>
-                           <li><a href="mining.html">Mining</a></li>
+                            <li><a href="commerical.html">Integrated Building</a></li>
+                            <li><a href="residential.html">Fire Detection</a></li>
+                            <li><a href="renewable.html">Fire Hydrant</a></li>
+                           <li><a href="mining.html">Voice Alarm</a></li>
+                            <li><a href="mining.html">CCTV</a></li>
+                             <li><a href="mining.html">Access Control</a></li>
+                              <li><a href="mining.html">Fire Suppression</a></li>
+                               <li><a href="mining.html">Network System</a></li>
+                                  <li><a href="internalexternal.html">Electrical Works</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
