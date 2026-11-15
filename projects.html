@@ -212,5 +212,71 @@ $(document).ready(function () {
         <script type="text/javascript" src="webcomponent/headerComponents.js"></script>
         <script type="text/javascript" src="webcomponent/FooterComponent.js"></script>
         <script type="text/javascript" src="webcomponent/video-hero.js" defer></script>
+
+        <script>
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("keydown", function(e) {
+    if (
+        e.ctrlKey &&
+        ["u", "s", "c", "a", "p"].includes(e.key.toLowerCase())
+    ) {
+        e.preventDefault();
+    }
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey &&
+        ["i", "j", "c"].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+
+
+<script>
+(function () {
+    // Disable right-click
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+
+    // Disable common keyboard shortcuts
+    document.addEventListener("keydown", function (e) {
+        const key = e.key.toLowerCase();
+
+        if (
+            (e.ctrlKey && ["s", "u", "c", "a", "p"].includes(key)) ||
+            (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
+            key === "f12"
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
+
+    // Disable text selection
+    document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+    });
+
+    // Disable drag and drop
+    document.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+    });
+})();
+</script>
+
+<style>
+    body {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+</style>
     </body>
 </html>
