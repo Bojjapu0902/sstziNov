@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title> SERVICE: SS TZIGANE INDIA PVT.LTD</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="sstzigane is one of the world’s most valuable and admired real estate development companies. Discover our innovative designs and quality constructions.">
+        <meta name="keywords" content="Office space for Rent in Hi-Tech, commercial Office Space in Raidurga, office Space in Hyderabad in it hub, commercial leasing office space for Banjara Hills, Banjara Hills Co-Workspace for Rent, Ameri Group, Amir Haq, Ali Haq, residential Flats in Hyderabad, new residential flats in Hyderabad, 3Bhk flats for sale in Hyderabad, Flats For Sale in Hyderabad, Luxury Apartments, residential flats For sale Kokapet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="sstzigane">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="sstzigane is one of the world’s most valuable and admired real estate development companies. Discover our innovative designs and quality constructions.">
+       
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+       
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       
+        <!-- style sheets and font icons -->
+        <link rel="stylesheet" href="css/vendors.css"/>
+        <link rel="stylesheet" href="css/icon.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
+        <link rel="stylesheet" href="css/business.css" />
+    </head>
+    <body data-mobile-nav-style="classic">  
+        <!-- start header -->
+            <header-component></header-component>
+       <!-- start page title -->
+            <video-hero title="On Going Projects"></video-hero>
+        <!-- end page title -->
+
+
+  
+
+
+  <!-- start section -->
+
+    
+        <section class="bg-midnight-blue background-position-left-bottom background-no-repeat sm-background-image-none" style="background-image: url('images/demo-conference-experts-bg.png')">
+            <div class="container">
+
+                <h4 class="alt-font fs-26 text-dark-gray fw-600 ls-minus-1px mb-20px sm-w-85 xs-w-100 mx-auto" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>List of On Going Projects</h4>
+                
+                <div class="" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>  
+                        <div id="ongoingprojects" class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
+                            
+                            <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+                            <script>
+$(document).ready(function () {
+    $.getJSON("./data/projects.json", function (data) {
+        var upcoming = '';
+
+        $.each(data.ongoing, function (key, value) {
+            upcoming += `
+             <!-- start team member item --> 
+            <div class="col text-center team-style-05 md-mb-50px">
+                <div class="position-relative mb-15px">
+                    <img class="border-radius-4px" src="./img/projects/${value.imgpath}" alt="${value.Projects}" /> 
+                    <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-10px team-content bg-base-color-transparent border-radius-4px">
+                        <div class="text-white w-90 md-w-90 absolute-middle-center opacity-9">
+                             <span class="fs-24 text-white fw-700 ">
+                                ${value.Projects}
+                            </span>
+                            <div class="d-flex flex-column justify-content-left">
+                            <div class="w-100 d-flex" style="justify-content: start; align-items: baseline;">
+                                 <p style=" text-align:left" class="mb-1 lh-20"> <span class="fw-600">Services:</span> ${value.service}</p>
+                                 
+                            </div>
+                            <div class="w-100 d-flex " style="justify-content: start; align-items: baseline;">
+                                 <p style="text-align: left;" class="mb-1 lh-20"> <span class="fw-600">Location:</span> ${value.city}, ${value.state}</p>
+                                 
+                            </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </div>
+            <!-- end team member item -->
+            `;
+        });
+
+        $('#ongoingprojects').html(upcoming);
+    }).fail(function () {
+        console.error("Failed to load service.json");
+    });
+});
+</script>
+
+
+                                </div>
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                </div>
+            </div>
+        </section>
+
+       
+
+
+
+
+
+
+
+
+
+
+       
+
+          
+
+        
+
+        
+        
+       
+      
+         <!-- end subscription popup -->
+        <footer-component></footer-component>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="webcomponent/headerComponents.js"></script>
+        <script type="text/javascript" src="webcomponent/FooterComponent.js"></script>
+        <script type="text/javascript" src="webcomponent/video-hero.js" defer></script>
+    </body>
+</html>

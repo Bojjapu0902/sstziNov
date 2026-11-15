@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>CONTACT US: SS TZIGANE INDIA PVT.LTD</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="sstzigane is one of the world’s most valuable and admired real estate development companies. Discover our innovative designs and quality constructions.">
+    <meta name="keywords" content="Office space for Rent in Hi-Tech, commercial Office Space in Raidurga, office Space in Hyderabad in it hub">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="sstzigane">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/business.css">
+</head>
+
+<body data-mobile-nav-style="classic">
+
+<header-component></header-component>
+
+<video-hero title="Contact Us"></video-hero>
+
+<section id="down-section" class="overflow-hidden">
+<div class="container">
+<div class="row g-0 justify-content-center">
+
+<!-- LEFT INFO -->
+<div class="col-lg-4 cover-background md-h-600px xs-h-400px" style="background-image:url('img/1082X1082.jpg');">
+<div class="d-flex align-items-center h-100">
+<div class="bg-base-color p-12 h-100 text-left">
+
+<h4 class="alt-font fw-600 text-white mb-8 p-3">Get In Touch</h4>
+
+<p class="text-white opacity-9 mb-2">
+1#5-22, First Floor, Road No: 2/A, Near Gokul Plots Signal, KPHB Colony, Hyderabad - 500085
+</p>
+
+<p class="mb-2">
+<i class="feather icon-feather-phone-call text-white me-7px"></i>
+<a href="tel:+918885333539" class="text-white opacity-9">+91 88853 333539</a>
+</p>
+
+<p>
+<i class="feather icon-feather-mail text-white me-7px"></i>
+<a href="mailto:info@sstziganeindia.com" class="text-white opacity-9">shabari@sstziganeindia.com</a>
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- FORM -->
+<div class="col-lg-6 offset-lg-1">
+<div class="pt-5 contact-form-style-01">
+
+<h4 class="alt-font fw-600 text-dark-gray mb-30px">
+Feel free to reach via contact us form.
+</h4>
+
+<form id="contactForm" action="email-templates/contact-form.php" method="post">
+
+<div class="position-relative form-group mb-20px">
+    <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
+<input type="text" name="name" class="form-control" placeholder="Your name*" required>
+</div>
+
+<div class="position-relative form-group mb-20px">
+    <span class="form-icon"><i class="bi bi-envelope"></i></span>
+<input type="email" name="email" class="form-control" placeholder="Your email address*" required>
+</div>
+
+<div class="position-relative form-group mb-20px">
+     <span class="form-icon"><i class="bi bi-phone"></i></span>
+<input type="tel" name="phone" class="form-control" placeholder="Phone Number*" required>
+</div>
+
+<div class="position-relative form-group mb-20px">
+     <span class="form-icon"><i class="bi bi-building"></i></span>
+<input type="text" name="company" class="form-control" placeholder="Company*" required>
+</div>
+
+<div class="position-relative form-group form-textarea">
+    <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
+<textarea name="message" class="form-control" rows="3" placeholder="Your message*" required></textarea>
+</div>
+
+<button type="submit" class="btn btn-small btn-round-edge btn-dark-gray mt-20px">
+Send message
+</button>
+
+<!-- RESULT MESSAGE -->
+<div class="form-results mt-20px d-none"></div>
+
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- MAP -->
+<section class="p-0">
+ <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3805.394498257088!2d78.37973067578066!3d17.48867179987826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI5JzE5LjIiTiA3OMKwMjInNTYuMyJF!5e0!3m2!1sen!2sin!4v1741335535345!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+</section>
+
+<footer-component></footer-component>
+
+<!-- scripts -->
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/vendors.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script> <!-- AJAX depends on jQuery -->
+<script type="text/javascript" src="webcomponent/headerComponents.js"></script>
+<script type="text/javascript" src="webcomponent/FooterComponent.js"></script>
+<script type="text/javascript" src="webcomponent/video-hero.js" defer></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<YOUR_API_KEY>&callback=initMap"></script>
+
+<script>
+$(function () {
+
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+
+        const form = $(this);
+        const result = form.find('.form-results');
+
+        $.ajax({
+            url: form.attr('action'),
+            type: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+
+            beforeSend() {
+                result.removeClass('d-none alert-success alert-danger')
+                      .addClass('alert alert-info')
+                      .text('Sending...');
+            },
+
+            success(res) {
+                result.removeClass('alert-info')
+                      .addClass(res.alert)
+                      .text(res.message);
+
+                if (res.alert === 'alert-success') form[0].reset();
+            },
+
+            error() {
+                result.removeClass('alert-info')
+                      .addClass('alert alert-danger')
+                      .text('Something went wrong. Please try again.');
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>
